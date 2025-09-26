@@ -8,23 +8,36 @@ looking = input("Where will you look, in the bushes, or  inside the great oak tr
 if looking == ("bushes"):
     print("You look in the bushes only to find a couple of berries, which you put in your bag, you then head over to look in the great oak tree finding the torch!")
 elif looking == ("great oak tree"):
-    print("you search inside the Great Oak Tree, finding the torch! congrats.")
+    print("you search inside the Great Oak Tree, finding the torch! congrats. Your next mission is to find the gates leading to the triforce")
 else:
-    
-print()P
+    print("Sorry that is not an option, Please type either, 'great oak tree' or 'bushes'")
 
-
-
+print("You have the torch to light your path, you need to find the Gates of Secrets leading to the triforce.")
+print("You light your torch, and see the fire flickering left but you also see a trail of rocks leading foward.")
+choice = input("Will you go foward and follow the rocks, (type fowar)
 
 
 #Annalise Kinsey, 2nd part lake region.
+def invalid_input():
+    print("I'm sorry that is not a valid input try again.")
+def user_input(choice):
+    return choice.stirp().lower
 print ("You arrive at lake Hylia. The second piece of the triforce visble at the bottom of the lake. To obtain it you will need to dive down to the bottom of the lake and find the key to the ornate chest it is hidden in.")
 print ("The lake is hundreds of feet deep and you will need scuba gear to reach the bottom. You glance around and notice a dark cave but you slaos can see a waterfall that leads up to a higher plateu over looking the lake")
-cave_choice = input(print("Will you go inside the cave or climb the waterfall? Type left for the cave and right for the waterfall")).strip().lower()
+cave_choice = user_input(input(print("Will you go inside the cave or climb the waterfall? Type left for the cave and right for the waterfall")))
 if cave_choice == ("right"):
-    print("You make your way toward the sheer rock face with water cascading down. You slowly begin to make you way up the slick black rocks. Several hours later you finally arrive at the top of the waterfall. You can see a river streaching")
+    print ("You make your way toward the sheer rock face with water cascading down. You slowly begin to make you way up the slick black rocks. Several hours later you finally arrive at the top of the waterfall")
+elif:
+    print("You plunge into the dark cave and through the light coming from the opening you can see that the cave drops off into a cliff. You back  out of the cave and make you way towards the waterfall instead. You make your way up to the top of the waterfall and at the top")
+    
+print ("you can see a river streaching for miles srrounded by a medow filled with wild flowers. As you glance around you see a sign that saying that there is a town a little less than a mile away. You still need to find the key to the tresure so you begin to look around.)" 
+print ("After hours of looking you finally stumble upon a door that leads down into the earth. You open the door and decend into the darkness beyond. After stumbling down some stairs in the darkness you come upon a room with a lit torch. You aproch a wall and notice a riddle writen upon it.")
+print ("The riddle reads: I am tall when I am yound and I am short when I am old what am I?")
+riddle_answer = user_input(input(print("What does the riddle mean?")))
 
-
+if riddle_answer = ("candle") or ("a candle")
+    print("Congradulations you solved the riddle.")
+else
 
 
 
@@ -36,7 +49,12 @@ print("Congrats you have made it to the base of Death mountain!")
 print("you have already have gotten the first two pieces of the triforce. Now you will need the last piece.")
 print(" However you will need armor in order to make it up death mountain, where the last piece of the triforce is guared by a Hinox.")
 print("you see a small light coming from inside a little hut looking house on your right, and to your left you see a very faint path")
-choice_DM = input(print("would yoou like"))
+choice_DM = input(print("would you like to go to the right, small hut or left down the path?\n ")).strip().lower()
+if choice_DM==("left"):
+    print("you go down the faint path. it had lots of preety colorful flowers and in one of the rose bushes you see something. You find a bottle with a  key and a small old map leading to somewhere inside.")
+else:
+    print("you make your way to the small hut. you find nothing and go down the path" )
 
+   
 
 
