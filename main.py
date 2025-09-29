@@ -1,18 +1,35 @@
 #AK,EB,YS,JS 6th Text based adventure game
 
 #Eva Briggs background story, begining and ending.
-print("This story begins in a small town in Hyrule where a young boy plays unaware of the evil that would soon uprise. This boy is named Link, little does he know he is a desendent of the legendery hero who in the paast had defeated the e")
+print("This story begins in a small village in Hyrule where a young boy plays unaware of the evil that would soon arise. This boy is named Link, little does he know he is a descendant of the legendary hero who in the past had protected Hyrule from the evils of Ganandorf and defeated him, but it was prophesied that one day Ganadorf would come back and a hero would rise and defeat him.")
+print("Years later the prophecy became true and the evil Lord Ganondorf returned and stole Princess Zelda, now someone must rise to save her, perhaps the descendant of the hero? Link does his chores on the farm not knowing what has just occurred, a messenger comes and tells the town to flee, links father tells him that he is descendant of the great hero and gives him the choice to flee with them or take his grandfather's sword and save the princess.")
+print("What will you do?")
+
+
+choice = input("Will you take the sword? or will you flee")
+while True:
+    if choice == ("Yes"):
+         print("You grab the sword and continue your journey ")  
+         break
+    elif choice ("No"):
+        ("You flee with the town and Lord Ganandorf takes over Hyrule")
+        break
+    else:
+        print("You need to tell your father Yes or No!")\
 
 #Juliette Santacruz, forest part of storyline     
 print("You arrive in The Lost Woods, the first part of the triforce buried deep in the woods. To obtain this piece, you will need to light torches to find you way and find a key to enter throough the gates.")
 print("First, you need to find the torch to light your way.")
 looking = input("Where will you look, in the bushes, or  inside the great oak tree?:\n").strip().lower()
-if looking == ("bushes"):
-    print("You look in the bushes only to find a couple of berries, which you put in your bag, you then head over to look in the great oak tree finding the torch!")
-elif looking == ("great oak tree"):
-    print("you search inside the Great Oak Tree, finding the torch! congrats. Your next mission is to find the gates leading to the triforce")
-else:
-    print("Sorry that is not an option, Please type either, 'great oak tree' or 'bushes'")
+while True:
+    if looking == ("bushes"):
+        print("You look in the bushes only to find a couple of berries, which you put in your bag, you then head over to look in the great oak tree finding the torch!")
+        break
+    elif looking == ("great oak tree"):
+        print("you search inside the Great Oak Tree, finding the torch! congrats. Your next mission is to find the gates leading to the triforce")
+        break
+    else:
+        print("Sorry that is not an option, Please type either, 'great oak tree' or 'bushes'")
 
 print("You have collected both berries, (Yu)r ")
 
@@ -78,5 +95,10 @@ else:
 print("after you walk down the path and collect the key and map you make your way following the map you fnd a hi")    
 
    
+#Eva Briggs ending
 
+print("Now that you have acquired all 3 pieces of the Triforce you can go to Hyrule Castle, defeat Ganondorf, and save Princess Zelda.)"??????""
 
+print("It takes you the next few days to get the castle but you made it and Ganondorf is there waiting for you.”)
+ 
+print("You walk into the castle and Ganondorf is there sitting on the king's throne. Ganondorf approaches and says: Finally the hero has come to try and defeat me, I have waited for you, and now I will destroy you.”) 
