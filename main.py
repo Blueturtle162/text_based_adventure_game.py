@@ -6,8 +6,23 @@ print("This story begins in a small village in Hyrule where a young boy plays un
 print("Years later the prophecy became true and the evil Lord Ganondorf returned and stole Princess Zelda, now someone must rise to save her, perhaps the descendant of the hero? Link does his chores on the farm not knowing what has just occurred, a messenger comes and tells the town to flee, links father tells him that he is descendant of the great hero and gives him the choice to flee with them or take his grandfather's sword and save the princess.")
 print("What will you do?")
 
+#Annalise Kinsey and Eva Briggs
+triforce = []
+def next_step():
+    choice = input ("For the next part of your journey would you like to go to the lost woods, lake hylia or the volcano first?").strip().lower()
+    while True:
+        if choice ==("lake hylia"):
+            lake_hylia()
+            break
+        elif choice == ("lost woods"):
+            lost_woods ()
+            break
+        elif choice == ("death mountian"):
+            death_mountain()
+            break
+        else:
+            print("Invalid input")
 
-   
 #Juliette Santacruz, forest part of storyline  
 def lost_woods():  
     print("You arrive in The Lost Woods, the first part of the triforce buried deep in the woods. To obtain this piece, you will need to light torches to find you way and find a key to enter through the gates.")
@@ -49,28 +64,18 @@ def lost_woods():
             print("Sorry that is not an option given, please type yes or no.")
     print("Good job you have found a piece of the triforce you need. ")
     print("Head to the next part of your adventure...which is to be continued...")
-    choice = input ("For the next part of your journey would you like to go to the lost woods, lake hylia or the volcano first?").strip().lower()
-    while True:
-        if choice ==("lake hylia"):
-            lake_hylia()
-            break
-        elif choice == ("lost woods"):
-            lost_woods ()
-            break
-        elif choice == ("death mountian"):
-            death_mountain()
-            break
-        else:
-            print("Invalid input")
-           
-
+    triforce.insert("triforce_piece_1")
+    if ("triforce_piece_3") and ("triforce_piece_2") and ("triforce_piece_3") in triforce:
+        castle()       
+    else:
+        next_step()
 
 #Annalise Kinsey, 2nd part lake region.
 def lake_hylia():
     def invalid_input():
         print("I'm sorry that is not a valid input try again.")
     def user_input(choice):
-        return choice.stirp().lower()
+        return choice.strip().lower()
     print ("You arrive at lake Hylia. A piece of the triforce visible at the bottom of the lake. To obtain it you will need to dive down to the bottom of the lake and find the key to the ornate chest it is hidden in.")
     print ("The lake is hundreds of feet deep and you will need scuba gear to reach the bottom. You glance around and notice a dark cave but you sailors can see a waterfall that leads up to a higher plateau overlooking the lake")
     cave_choice = user_input(input(print("Will you go inside the cave or climb the waterfall? Type left for the cave and right for the waterfall")))
@@ -112,19 +117,11 @@ def lake_hylia():
 
     print ("You leave the town behind and make your way back to the top of the waterfall. You climb back down the rocks and make your way to Hylia lake. You put on your scuba gear and dive down to the bottom of the lake. You pull out the silver key and use it to unlock the chest located at the bottom of the lake.")
     print ("A glow spills out of the chest and you can see a small golden triangle. You grab the triangle and obtain part of the triforce. You surface from the bottom of the lake. You take off all of you scuba gear and start on a path that should take you to the base of death mountain.")
-    choice = input ("For the next part of your journey would you like to go to the lost woods, lake hylia or the volcano first?").strip().lower()
-    while True:
-        if choice ==("lake hylia"):
-            lake_hylia()
-            break
-        elif choice == ("lost woods"):
-            lost_woods ()
-            break
-        elif choice == ("death mountian"):
-            death_mountain()
-            break
-        else:
-            print("Invalid input")
+    triforce.insert("triforce_piece_2")
+    if ("triforce_piece_3") and ("triforce_piece_2") and ("triforce_piece_3") in triforce:
+        castle()       
+    else:
+        next_step()
 #Yaretzi Sanchez, Death mount , part 3
 def death_mountain():
     print("Congrats you have made it to the base of Death mountain!")
@@ -166,38 +163,30 @@ def death_mountain():
         pick_upTriforce = input(" enter pick up to pickup a piece of the triforce!\n").strip().lower()
         if pick_upTriforce == "pick up":
             print(">>>Congrats you have acquired a piece of the triforce!<<<")
+            break
         else:
             print("please enter pick up.")
-            break
-    choice = input ("For the next part of your journey would you like to go to the lost woods, lake hylia or the volcano first?").stirp().lower()
-    while True:
-        if choice ==("lake hylia"):
-            lake_hylia()
-            break
-        elif choice == ("lost woods"):
-            lost_woods ()
-            break
-        elif choice == ("death mountian"):
-            death_mountain()
-            break
-        else:
-            print("Invalid input")
+    triforce.insert("triforce_piece_3")    
+    if ("triforce_piece_3") and ("triforce_piece_2") and ("triforce_piece_3") in triforce:
+        castle()       
+    else:
+        next_step()
    
-#Eva Briggs beginning
-choice = input("Will you take the sword? or will you flee").stirp().lower()
+
+choice = input("Will you take the sword? Yes or No?").strip().lower()
 while True:
     if choice == ("yes"):
          print("You grab the sword and continue your journey ")  
          break
-    elif choice ("no"):
+    elif choice ==("no"):
         print("You flee with the town and Lord Ganandorf takes over Hyrule. Try again.")
     else:
         print("You need to tell your father Yes or No! Try again.")
 
-    triforce.insert("triforce_piece_3")
+    
 
 
-choice = input ("For the start of your journey would you like to go to the lost woods, lake hylia or the volcano first?").stirp().lower()
+choice = input ("For the start of your journey would you like to go to the lost woods, lake hylia or the volcano first?").strip().lower()
 while True:
     if choice ==("lake hylia"):
         lake_hylia()
@@ -210,23 +199,24 @@ while True:
         break
     else:
         print("Invalid input")
-triforce = []
+
 
 #Eva Briggs ending
-print("Now that you have acquired all 3 pieces of the Triforce you can go to Hyrule Castle, defeat Ganondorf, and save Princess Zelda.")
-print("It takes you the next few days to get the castle but you made it and Ganondorf is there waiting for you.")
-print("You walk into the castle and Ganondorf is there sitting on the king's throne. Ganondorf approaches and says: Finally the hero has come to try and defeat me, I have waited for you, and now I will destroy you.")
-print("You look up see the princess in a cage hanging from the ceiling, you throw your sword and it cuts the rope, she lands, picks up the sword and stabs Ganondorf in the back, with the power of the triforce it destroys him, for good.")
-print("Now Hyrule is saved! You and the princess exchange glances of gratitude, she approaches you and thanks you for your courage and bravery, she knights you and asks if you want to become the head of Hyrule's defence and chief knight, much better than a farmer, though you do miss home.")
+def castle():
+    print("Now that you have acquired all 3 pieces of the Triforce you can go to Hyrule Castle, defeat Ganondorf, and save Princess Zelda.")
+    print("It takes you the next few days to get the castle but you made it and Ganondorf is there waiting for you.")
+    print("You walk into the castle and Ganondorf is there sitting on the king's throne. Ganondorf approaches and says: Finally the hero has come to try and defeat me, I have waited for you, and now I will destroy you.")
+    print("You look up see the princess in a cage hanging from the ceiling, you throw your sword and it cuts the rope, she lands, picks up the sword and stabs Ganondorf in the back, with the power of the triforce it destroys him, for good.")
+    print("Now Hyrule is saved! You and the princess exchange glances of gratitude, she approaches you and thanks you for your courage and bravery, she knights you and asks if you want to become the head of Hyrule's defence and chief knight, much better than a farmer, though you do miss home.")
 
 
-choice = input("Do you accept?").stirp().lower()
-while True:
-    if choice == ("yes"):
-         print("You become the Chief Knight and are in charge of Hyrule castle's defence and make your father very proud. Overall you are very happy.")  
-         break
-    elif choice ("no"):
-        ("You politely decline and go home a hero, the entire village praises you for your bravery, you continue to be a farmer and you live the rest of your life in peace with your father in the village. ")
-        break
-    else:
+    choice = input("Do you accept?").strip().lower()
+    while True:
+        if choice == ("yes"):
+            print("You become the Chief Knight and are in charge of Hyrule castle's defence and make your father very proud. Overall you are very happy.")  
+            break
+        elif choice ("no"):
+            print ("You politely decline and go home a hero, the entire village praises you for your bravery, you continue to be a farmer and you live the rest of your life in peace with your father in the village. ")
+            break
+        else:
             print("You need time to think about it.")
