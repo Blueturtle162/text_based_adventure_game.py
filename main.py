@@ -9,7 +9,7 @@ print("What will you do?")
 #Annalise Kinsey and Eva Briggs
 triforce = []
 def next_step():
-    choice = input ("For the next part of your journey would you like to go to the lost woods, lake hylia or the volcano first?").strip().lower()
+    choice = input ("For the next part of your journey would you like to go to the lost woods, lake hylia or death mountain first?").strip().lower()
     while True:
         if choice ==("lake hylia"):
             lake_hylia()
@@ -17,12 +17,12 @@ def next_step():
         elif choice == ("lost woods"):
             lost_woods ()
             break
-        elif choice == ("death mountian"):
+        elif choice == ("death mountain"):
             death_mountain()
             break
         else:
             print("Invalid input")
-            choice = input ("For the next part of your journey would you like to go to the lost woods, lake hylia or the volcano first?").strip().lower()
+            choice = input ("For the next part of your journey would you like to go to the lost woods, lake hylia or death mountain first?").strip().lower()
 
 #Juliette Santacruz, forest part of storyline  
 def lost_woods():  
@@ -67,8 +67,8 @@ def lost_woods():
             print("Sorry that is not an option given, please type yes or no.")
     print("Good job you have found a piece of the triforce you need. ")
     print("Head to the next part of your adventure...which is to be continued...")
-    triforce.insert("triforce_piece_1")
-    if ("triforce_piece_3") and ("triforce_piece_2") and ("triforce_piece_3") in triforce:
+    triforce.insert(0,"triforce_piece_1")
+    if ("triforce_piece_1") in triforce and ("triforce_piece_2") in triforce and ("triforce_piece_3") in triforce:
         castle()       
     else:
         next_step()
@@ -81,7 +81,7 @@ def lake_hylia():
         return choice.strip().lower()
     print ("You arrive at lake Hylia. A piece of the triforce visible at the bottom of the lake. To obtain it you will need to dive down to the bottom of the lake and find the key to the ornate chest it is hidden in.")
     print ("The lake is hundreds of feet deep and you will need scuba gear to reach the bottom. You glance around and notice a dark cave but you sailors can see a waterfall that leads up to a higher plateau overlooking the lake")
-    cave_choice = user_input(input(print("Will you go inside the cave or climb the waterfall? Type left for the cave and right for the waterfall")))
+    cave_choice = user_input(input("Will you go inside the cave or climb the waterfall? Type left for the cave and right for the waterfall"))
     while True:
         if cave_choice == ("right"):
             print ("You make your way toward the sheer rock face with water cascading down. You slowly begin to make your way up the slick black rocks. Several hours later you finally arrive at the top of the waterfall")
@@ -90,11 +90,12 @@ def lake_hylia():
             print("You plunge into the dark cave and through the light coming from the opening you can see that the cave drops off into a cliff. You back  out of the cave and make your way towards the waterfall instead. You make your way up to the top of the waterfall and at the top")
             break
         else:
-            invalid_input
+            invalid_input()
+            cave_choice = user_input(input("Will you go inside the cave or climb the waterfall? Type left for the cave and right for the waterfall"))
     print ("you can see a river stretching for miles surrounded by a meadow filled with wild flowers. As you glance around you see a sign saying that there is a town a little less than a mile away. You still need to find the key to the treasure so you begin to look around.")
     print ("After hours of looking you finally stumble upon a door that leads down into the earth. You open the door and descend into the darkness beyond. After stumbling down some stairs in the darkness you come upon a room with a lit torch. You approach a wall and notice a riddle written upon it.")
     print ("The riddle reads: I am tall when I am young and I am short when I am old what am I?")
-    riddle_answer = user_input(input(print("What does the riddle mean?")))
+    riddle_answer = user_input(input("What does the riddle mean?"))
 
 
     while True:
@@ -103,26 +104,26 @@ def lake_hylia():
             break
         else:
             print("You enter your answer to the riddle and nothing happens. You should try again.")
-            riddle_answer = user_input(input(print("What does the riddle mean?")))
+            riddle_answer = user_input(input("What does the riddle mean?"))
 
 
     print ("The wall the riddle was written on begins to shake and move to the left. It reveals a room with a chest in the center. You open the chest and discover a small silver key. You pocket the key and then exit the room. You make your way back up the stairs and exit into the medow")
     print ("You still need to find scuba gear to get to the bottom of the lake. You remember seeing a sign about a town nearby and you make your way down a dirt path that appears to lead to the nearest town. After walking for 20 minutes you stumble upon a small town with quaint little shops all lining a bustling town square.")
     print ("You examine all the shops and notice that one proclaims that it sells the best quality scuba gear. You make your way over to the shop and the owner greets you with a smile. On the course of your journey you have not earned enough money to buy the scuba gear by the owner of the shop informs you that if you can solve her riddle she will give you the gear for free.")
     print ("The shop keeper gives you a piece of paper. The paper reads I have a bed but never sleep I have a mouth but never speak what am I?")
-    river_answer = user_input(input(print("What is the answer to the riddle?")))
+    river_answer = user_input(input("What is the answer to the riddle?"))
     while True:
         if river_answer == "river" or river_answer == "a river":
             print("The shop keeper smilies and gives you the scuba gear.")
             break
         else:
             print ("The shop keeper shakes her head and tells you to try again.")
-            river_answer = user_input(input(print("What is the answer to the riddle?")))
+            river_answer = user_input(input("What is the answer to the riddle?"))
 
     print ("You leave the town behind and make your way back to the top of the waterfall. You climb back down the rocks and make your way to Hylia lake. You put on your scuba gear and dive down to the bottom of the lake. You pull out the silver key and use it to unlock the chest located at the bottom of the lake.")
     print ("A glow spills out of the chest and you can see a small golden triangle. You grab the triangle and obtain part of the triforce. You surface from the bottom of the lake. You take off all of you scuba gear and start on a path that should take you to the base of death mountain.")
-    triforce.insert("triforce_piece_2")
-    if ("triforce_piece_3") and ("triforce_piece_2") and ("triforce_piece_3") in triforce:
+    triforce.insert(0,"triforce_piece_2")
+    if ("triforce_piece_3") in triforce and ("triforce_piece_2") in triforce and ("triforce_piece_3") in triforce:
         castle()       
     else:
         next_step()
@@ -131,19 +132,22 @@ def death_mountain():
     print("Congrats you have made it to the base of Death mountain!")
     print(" You will need armor in order to make it up Death mountain, where a piece of the triforce is guarded by a Hinox. Plus you will need water and food for the trip there.")
     print("you see a small light coming from inside a little hut looking house on your right, and to your left you see a very faint path")
-    choice_DM = input(print("would you like to go to the right, small hut or left down the path?\n")).strip().lower()
+    
     while True:
         choice_DM = input(print("would you like to go to the right, small hut or left down the path?\n")).strip().lower()
         if choice_DM=="left":
             print("you go down the faint path. It had lots of pretty colorful flowers and trees making it shady but still sunny. In one of  the many rose bushes, you see something. You find a small old map leading to somewhere inside. Though you need more food for the trip. lucky you find berries and some apples")
+            break
         elif choice_DM == "right":
             print("you make your way to the small hut. It's a cozy little place that is being overgrown by vines and flowers, you go in the wooden old door barely on its hinges. you find a chest about the size of a stool, full of food, and bottles of water, Yay lucky you! After you collect your findings, you go down the faint path. It had lots of pretty colorful flowers and trees making it shady but still sunny. In one of  the many rose bushes, you see something. You find a green bottle with a small old map leading to somewhere inside.")
+            break
         else:
             print("pleaser enter left or right.")
-        break
+            choice_DM = input(print("would you like to go to the right, small hut or left down the path?\n")).strip().lower()
+
     print("after following the map it leads you to a shady, cool hidden spot by trees and overgrown green grass bushes. you make your way through the thick bushes and see armor!")
     while True:
-        pathway_2 = input("only problem is that it is on higher ground, to get to it would you like to try and climb the loose rocks or try and find another way up? type rocks or look around.\n").strip().lower()
+        
         if pathway_2 == "look around":
             print(" after some walking and looking around you find this little dirt up hill path, how convenient! you go up this little dirt path and you make it up to the shinny armor! and its a perfect fit, well almost. but now you have everything to climb Death moutain!")
             break        
@@ -172,8 +176,8 @@ def death_mountain():
         else:
             print("please enter pick up.")
             pick_upTriforce = input(" enter pick up to pickup the last piece of the triforce!\n").strip().lower()
-    triforce.insert("triforce_piece_3")    
-    if ("triforce_piece_3") and ("triforce_piece_2") and ("triforce_piece_3") in triforce:
+    triforce.insert(0,"triforce_piece_3")    
+    if ("triforce_piece_3") in triforce and ("triforce_piece_2") in triforce and ("triforce_piece_3") in triforce:
         castle()       
     else:
         next_step()
@@ -194,7 +198,7 @@ while True:
     
 
 
-choice = input ("For the start of your journey would you like to go to the lost woods, lake hylia or the volcano first?").strip().lower()
+choice = input ("For the start of your journey would you like to go to the lost woods, lake hylia or the death mountain first?").strip().lower()
 while True:
     if choice ==("lake hylia"):
         lake_hylia()
@@ -202,12 +206,12 @@ while True:
     elif choice == ("lost woods"):
         lost_woods ()
         break
-    elif choice == ("death mountian"):
+    elif choice == ("death mountain"):
         death_mountain()
         break
     else:
         print("Invalid input")
-        choice = input ("For the start of your journey would you like to go to the lost woods, lake hylia or the volcano first?").strip().lower()
+        choice = input ("For the start of your journey would you like to go to the lost woods, lake hylia or the death mountain first?").strip().lower()
 
 
 
