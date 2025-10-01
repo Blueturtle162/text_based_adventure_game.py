@@ -124,8 +124,8 @@ def lake_hylia():
             print("Congradulations you solved the riddle.")
             break
         else:
-            print("You enter your answer to the riddle and nothing happens. You should try again.")
-            riddle_answer = user_input(input("What does the riddle mean?"))
+            print("You enter your answer to the riddle and a trap door opens up into a bottomless pit. Game over.")
+            exit()
 
 
     print ("The wall the riddle was written on begins to shake and move to the left. It reveals a room with a chest in the center. You open the chest and discover a small silver key. You pocket the key and then exit the room. You make your way back up the stairs and exit into the medow")
