@@ -22,6 +22,7 @@ def next_step():
             break
         else:
             print("Invalid input")
+            choice = input ("For the next part of your journey would you like to go to the lost woods, lake hylia or the volcano first?").strip().lower()
 
 #Juliette Santacruz, forest part of storyline  
 def lost_woods():  
@@ -34,7 +35,7 @@ def lost_woods():
             break
         elif looking == "great oak tree":
             print("you search inside the Great Oak Tree, finding the torch! congrats. Your next mission is to find the gates leading to the triforce")
-       
+            break       
         else:
             print("Sorry that is not an option, Please type either, 'great oak tree' or 'bushes'")
    
@@ -45,8 +46,9 @@ def lost_woods():
         if choice == "left":
             print("You  go left, following the torch... after 1 hour of long walking, you end up the gates but it is guarded by an evil elf!")
             break
-        elif choice == "foward":
+        elif choice == "forward":
             print("You walk the way the rocks are leading, after several hours you finally arrive at the gates..however it is guarded by an evil elf.")
+            break
         else:
             print("Sorry, that is not an option given. please type 'forward' or 'left'")
      
@@ -60,6 +62,7 @@ def lost_woods():
             break
         elif berries == "no":
             print("You didn't get the berries and you have to go back..You do end up going back and finally finding the berries you take this journey and give it the elf. He lets you enter the gates and you find a piece of the triforce.")
+            break
         else:
             print("Sorry that is not an option given, please type yes or no.")
     print("Good job you have found a piece of the triforce you need. ")
@@ -95,25 +98,26 @@ def lake_hylia():
 
 
     while True:
-        if riddle_answer == ("candle") or ("a candle"):
+        if riddle_answer == "candle" or riddle_answer == "a candle":
             print("Congradulations you solved the riddle.")
             break
         else:
             print("You enter your answer to the riddle and nothing happens. You should try again.")
+            riddle_answer = user_input(input(print("What does the riddle mean?")))
 
 
     print ("The wall the riddle was written on begins to shake and move to the left. It reveals a room with a chest in the center. You open the chest and discover a small silver key. You pocket the key and then exit the room. You make your way back up the stairs and exit into the medow")
     print ("You still need to find scuba gear to get to the bottom of the lake. You remember seeing a sign about a town nearby and you make your way down a dirt path that appears to lead to the nearest town. After walking for 20 minutes you stumble upon a small town with quaint little shops all lining a bustling town square.")
     print ("You examine all the shops and notice that one proclaims that it sells the best quality scuba gear. You make your way over to the shop and the owner greets you with a smile. On the course of your journey you have not earned enough money to buy the scuba gear by the owner of the shop informs you that if you can solve her riddle she will give you the gear for free.")
     print ("The shop keeper gives you a piece of paper. The paper reads I have a bed but never sleep I have a mouth but never speak what am I?")
-    river_answer = user_input(input(print("What is the answer to the riddle")))
+    river_answer = user_input(input(print("What is the answer to the riddle?")))
     while True:
-        if river_answer == ("river") or ("a river"):
+        if river_answer == "river" or river_answer == "a river":
             print("The shop keeper smilies and gives you the scuba gear.")
             break
         else:
             print ("The shop keeper shakes her head and tells you to try again.")
-
+            river_answer = user_input(input(print("What is the answer to the riddle?")))
 
     print ("You leave the town behind and make your way back to the top of the waterfall. You climb back down the rocks and make your way to Hylia lake. You put on your scuba gear and dive down to the bottom of the lake. You pull out the silver key and use it to unlock the chest located at the bottom of the lake.")
     print ("A glow spills out of the chest and you can see a small golden triangle. You grab the triangle and obtain part of the triforce. You surface from the bottom of the lake. You take off all of you scuba gear and start on a path that should take you to the base of death mountain.")
@@ -138,27 +142,28 @@ def death_mountain():
             print("pleaser enter left or right.")
         break
     print("after following the map it leads you to a shady, cool hidden spot by trees and overgrown green grass bushes. you make your way through the thick bushes and see armor!")
-    pathway_2 = input("only problem is that it is on higher ground, to get to it would you like to try and climb the loose rocks or try and find another way up? type rocks or look around.\n").strip().lower()
     while True:
         pathway_2 = input("only problem is that it is on higher ground, to get to it would you like to try and climb the loose rocks or try and find another way up? type rocks or look around.\n").strip().lower()
         if pathway_2 == "look around":
             print(" after some walking and looking around you find this little dirt up hill path, how convenient! you go up this little dirt path and you make it up to the shinny armor! and its a perfect fit, well almost. but now you have everything to climb Death moutain!")
+            break        
         elif pathway_2 == "rocks":
             print("you try to climb the rocks but you fall. Let's look around for another way up. After a while you find this little dirt path and you make it up to the shinny armor! and it's a perfect fit, well almost. but now you have everything to climb Death Mountain! ")
+            break
         else:
             print("please enter rocks or look around.")
-            break
+            pathway_2 = input("only problem is that it is on higher ground, to get to it would you like to try and climb the loose rocks or try and find another way up? type rocks or look around.\n").strip().lower()
     print("you make your way up Death mountain and by a good pace you have already reached the top! Now you must defeat the Hinox in order to get a Triforce piece.")
     while True:
-        start_fight = input("enter start to being fight\n").strip().Upper()
+        start_fight = input("enter start to being fight\n").strip().upper()
         if start_fight == "START":
             print("the battle starts and after around 10 minutes you manage to defeat the Phoenix, even if it was a close one. Yay!")
+            break       
         else:
             print("please enter start")
             break
    
     print("now that the hinox is defeated you climb the mountain a little further, the path is much more nicer now, it has grass on the sides and flowers here and there. once up on the top of death mountain your find a piece of the triforce!")
-    pick_upTriforce = input(" enter pick up to pickup the last piece of the triforce!\n").strip().lower()
     while True:
         pick_upTriforce = input(" enter pick up to pickup a piece of the triforce!\n").strip().lower()
         if pick_upTriforce == "pick up":
@@ -166,6 +171,7 @@ def death_mountain():
             break
         else:
             print("please enter pick up.")
+            pick_upTriforce = input(" enter pick up to pickup the last piece of the triforce!\n").strip().lower()
     triforce.insert("triforce_piece_3")    
     if ("triforce_piece_3") and ("triforce_piece_2") and ("triforce_piece_3") in triforce:
         castle()       
@@ -180,8 +186,10 @@ while True:
          break
     elif choice ==("no"):
         print("You flee with the town and Lord Ganandorf takes over Hyrule. Try again.")
+        choice = input("Will you take the sword? Yes or No?").strip().lower()
     else:
         print("You need to tell your father Yes or No! Try again.")
+        choice = input("Will you take the sword? Yes or No?").strip().lower()
 
     
 
@@ -199,6 +207,8 @@ while True:
         break
     else:
         print("Invalid input")
+        choice = input ("For the start of your journey would you like to go to the lost woods, lake hylia or the volcano first?").strip().lower()
+
 
 
 #Eva Briggs ending
@@ -215,8 +225,9 @@ def castle():
         if choice == ("yes"):
             print("You become the Chief Knight and are in charge of Hyrule castle's defence and make your father very proud. Overall you are very happy.")  
             break
-        elif choice ("no"):
+        elif choice == ("no"):
             print ("You politely decline and go home a hero, the entire village praises you for your bravery, you continue to be a farmer and you live the rest of your life in peace with your father in the village. ")
             break
         else:
             print("You need time to think about it.")
+            choice = input("Do you accept?").strip().lower()
