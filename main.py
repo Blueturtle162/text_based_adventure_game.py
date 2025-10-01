@@ -6,6 +6,27 @@ print("This story begins in a small village in Hyrule where a young boy plays un
 print("Years later the prophecy became true and the evil Lord Ganondorf returned and stole Princess Zelda, now someone must rise to save her, perhaps the descendant of the hero? Link does his chores on the farm not knowing what has just occurred, a messenger comes and tells the town to flee, links father tells him that he is descendant of the great hero and gives him the choice to flee with them or take his grandfather's sword and save the princess.")
 print("What will you do?")
 
+#Eva Briggs ending
+def castle():
+    print("Now that you have acquired all 3 pieces of the Triforce you can go to Hyrule Castle, defeat Ganondorf, and save Princess Zelda.")
+    print("It takes you the next few days to get the castle but you made it and Ganondorf is there waiting for you.")
+    print("You walk into the castle and Ganondorf is there sitting on the king's throne. Ganondorf approaches and says: Finally the hero has come to try and defeat me, I have waited for you, and now I will destroy you.")
+    print("You look up see the princess in a cage hanging from the ceiling, you throw your sword and it cuts the rope, she lands, picks up the sword and stabs Ganondorf in the back, with the power of the triforce it destroys him, for good.")
+    print("Now Hyrule is saved! You and the princess exchange glances of gratitude, she approaches you and thanks you for your courage and bravery, she knights you and asks if you want to become the head of Hyrule's defence and chief knight, much better than a farmer, though you do miss home.")
+
+
+    choice = input("Do you accept?").strip().lower()
+    while True:
+        if choice == ("yes"):
+            print("You become the Chief Knight and are in charge of Hyrule castle's defence and make your father very proud. Overall you are very happy.")  
+            break
+        elif choice == ("no"):
+            print ("You politely decline and go home a hero, the entire village praises you for your bravery, you continue to be a farmer and you live the rest of your life in peace with your father in the village. ")
+            break
+        else:
+            print("You need time to think about it.")
+            choice = input("Do you accept?").strip().lower()
+
 #Annalise Kinsey and Eva Briggs
 triforce = []
 def next_step():
@@ -159,13 +180,13 @@ def death_mountain():
             
     print("you make your way up Death mountain and by a good pace you have already reached the top! Now you must defeat the Hinox in order to get a Triforce piece.")
     while True:
-        start_fight = input("enter start to being fight\n").strip().upper()
+        start_fight = input("enter start to begin fight\n").strip().upper()
         if start_fight == "START":
             print("the battle starts and after around 10 minutes you manage to defeat the Phoenix, even if it was a close one. Yay!")
             break       
         else:
-            print("please enter start")
-            break
+            print("please type 'start'")
+            
    
     print("now that the hinox is defeated you climb the mountain a little further, the path is much more nicer now, it has grass on the sides and flowers here and there. once up on the top of death mountain your find a piece of the triforce!")
     while True:
@@ -175,7 +196,7 @@ def death_mountain():
             break
         else:
             print("please enter pick up.")
-            pick_upTriforce = input(" enter pick up to pickup the last piece of the triforce!\n").strip().lower()
+            
     triforce.insert(0,"triforce_piece_3")    
     if ("triforce_piece_1") in triforce and ("triforce_piece_2") in triforce and ("triforce_piece_3") in triforce:
         castle()       
@@ -215,23 +236,3 @@ while True:
 
 
 
-#Eva Briggs ending
-def castle():
-    print("Now that you have acquired all 3 pieces of the Triforce you can go to Hyrule Castle, defeat Ganondorf, and save Princess Zelda.")
-    print("It takes you the next few days to get the castle but you made it and Ganondorf is there waiting for you.")
-    print("You walk into the castle and Ganondorf is there sitting on the king's throne. Ganondorf approaches and says: Finally the hero has come to try and defeat me, I have waited for you, and now I will destroy you.")
-    print("You look up see the princess in a cage hanging from the ceiling, you throw your sword and it cuts the rope, she lands, picks up the sword and stabs Ganondorf in the back, with the power of the triforce it destroys him, for good.")
-    print("Now Hyrule is saved! You and the princess exchange glances of gratitude, she approaches you and thanks you for your courage and bravery, she knights you and asks if you want to become the head of Hyrule's defence and chief knight, much better than a farmer, though you do miss home.")
-
-
-    choice = input("Do you accept?").strip().lower()
-    while True:
-        if choice == ("yes"):
-            print("You become the Chief Knight and are in charge of Hyrule castle's defence and make your father very proud. Overall you are very happy.")  
-            break
-        elif choice == ("no"):
-            print ("You politely decline and go home a hero, the entire village praises you for your bravery, you continue to be a farmer and you live the rest of your life in peace with your father in the village. ")
-            break
-        else:
-            print("You need time to think about it.")
-            choice = input("Do you accept?").strip().lower()
