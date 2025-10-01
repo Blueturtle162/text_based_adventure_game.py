@@ -39,7 +39,7 @@ def lost_woods():
         else:
             print("Sorry that is not an option, Please type either, 'great oak tree' or 'bushes'")
    
-        print("You have the torch to light your path, you need to find the Gates of Secrets leading to the triforce.")
+    print("You have the torch to light your path, you need to find the Gates of Secrets leading to the triforce.")
     print("You light your torch, and see the fire flickering left but you also see a trail of rocks leading forward.")
     while True:
         choice = input("Will you follow the rocks and go forward, or will you follow the torch and go left? (Type forward or type left):\n").strip().lower()
@@ -123,7 +123,7 @@ def lake_hylia():
     print ("You leave the town behind and make your way back to the top of the waterfall. You climb back down the rocks and make your way to Hylia lake. You put on your scuba gear and dive down to the bottom of the lake. You pull out the silver key and use it to unlock the chest located at the bottom of the lake.")
     print ("A glow spills out of the chest and you can see a small golden triangle. You grab the triangle and obtain part of the triforce. You surface from the bottom of the lake. You take off all of you scuba gear and start on a path that should take you to the base of death mountain.")
     triforce.insert(0,"triforce_piece_2")
-    if ("triforce_piece_3") in triforce and ("triforce_piece_2") in triforce and ("triforce_piece_3") in triforce:
+    if ("triforce_piece_1") in triforce and ("triforce_piece_2") in triforce and ("triforce_piece_3") in triforce:
         castle()       
     else:
         next_step()
@@ -134,7 +134,7 @@ def death_mountain():
     print("you see a small light coming from inside a little hut looking house on your right, and to your left you see a very faint path")
     
     while True:
-        choice_DM = input(print("would you like to go to the right, small hut or left down the path?\n")).strip().lower()
+        choice_DM = input("would you like to go to the right, small hut or left down the path?\n").strip().lower()
         if choice_DM=="left":
             print("you go down the faint path. It had lots of pretty colorful flowers and trees making it shady but still sunny. In one of  the many rose bushes, you see something. You find a small old map leading to somewhere inside. Though you need more food for the trip. lucky you find berries and some apples")
             break
@@ -143,11 +143,11 @@ def death_mountain():
             break
         else:
             print("pleaser enter left or right.")
-            choice_DM = input(print("would you like to go to the right, small hut or left down the path?\n")).strip().lower()
+            
 
     print("after following the map it leads you to a shady, cool hidden spot by trees and overgrown green grass bushes. you make your way through the thick bushes and see armor!")
     while True:
-        
+        pathway_2 = input("only problem is that it is on higher ground, to get to it would you like to try and climb the loose rocks or try and find another way up? type rocks or look around.\n").strip().lower()
         if pathway_2 == "look around":
             print(" after some walking and looking around you find this little dirt up hill path, how convenient! you go up this little dirt path and you make it up to the shinny armor! and its a perfect fit, well almost. but now you have everything to climb Death moutain!")
             break        
@@ -156,7 +156,7 @@ def death_mountain():
             break
         else:
             print("please enter rocks or look around.")
-            pathway_2 = input("only problem is that it is on higher ground, to get to it would you like to try and climb the loose rocks or try and find another way up? type rocks or look around.\n").strip().lower()
+            
     print("you make your way up Death mountain and by a good pace you have already reached the top! Now you must defeat the Hinox in order to get a Triforce piece.")
     while True:
         start_fight = input("enter start to being fight\n").strip().upper()
@@ -177,7 +177,7 @@ def death_mountain():
             print("please enter pick up.")
             pick_upTriforce = input(" enter pick up to pickup the last piece of the triforce!\n").strip().lower()
     triforce.insert(0,"triforce_piece_3")    
-    if ("triforce_piece_3") in triforce and ("triforce_piece_2") in triforce and ("triforce_piece_3") in triforce:
+    if ("triforce_piece_1") in triforce and ("triforce_piece_2") in triforce and ("triforce_piece_3") in triforce:
         castle()       
     else:
         next_step()
@@ -198,7 +198,7 @@ while True:
     
 
 
-choice = input ("For the start of your journey would you like to go to the lost woods, lake hylia or the death mountain first?").strip().lower()
+choice = input ("For the start of your journey would you like to go to the lost woods, lake hylia or death mountain first?").strip().lower()
 while True:
     if choice ==("lake hylia"):
         lake_hylia()
@@ -211,7 +211,7 @@ while True:
         break
     else:
         print("Invalid input")
-        choice = input ("For the start of your journey would you like to go to the lost woods, lake hylia or the death mountain first?").strip().lower()
+        choice = input ("For the start of your journey would you like to go to the lost woods, lake hylia or death mountain first?").strip().lower()
 
 
 
